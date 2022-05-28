@@ -1,0 +1,10 @@
+Specify the HTTP port that will be used for Oracle Application Express [8080]:
+
+Specify a port that will be used for the database listener [1521]:
+
+sudo usermod -a -G dba YOURUSERNAME
+
+sudo usermod -a -G dba smiley
+
+--module-path ${PATH_TO_FX} --add-modules javafx.fxml,javafx.controls,javafx.graphics
+
