@@ -45,15 +45,22 @@ public class EmployeeController {
 
     @FXML
     private void searchEmployee(ActionEvent actionEvent) throws ClassNotFoundException, SQLException {
+
         try {
+            //System.out.println("aerg");
             Employee employee = EmployeeDataAccessObject.searchEmployee(empIdText.getText());
+
             populateAndShowEmployee(employee);
+
         } catch (SQLException e) {
             e.printStackTrace();
             resultArea.setText("Error occured \n "+e);
             throw e;
         }
 
+
+
+        System.out.println("mesaj");
     }
 
     @FXML

@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.scenebuilderproba.controller.EmployeeController">
     <center>
         <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0">
             <children>
@@ -21,7 +21,7 @@
                     <children>
                         <HBox layoutX="476.0" layoutY="116.0" spacing="40.0">
                             <children>
-                                <Button fx:id="searchEmpBtn" mnemonicParsing="false" text="Search" />
+                                <Button fx:id="searchEmpBtn" mnemonicParsing="false" onAction="#searchEmployee" text="Search" />
                                 <Button mnemonicParsing="false" text="Update" />
                                 <Button mnemonicParsing="false" text="Delete" />
                             </children>
@@ -63,7 +63,7 @@
                         </HBox>
                         <HBox layoutX="470.0" layoutY="74.0" prefHeight="24.0" prefWidth="289.0" spacing="10.0">
                             <children>
-                                <TextField fx:id="empIdText" prefHeight="24.0" prefWidth="96.0" />
+                                <TextField prefHeight="24.0" prefWidth="96.0" />
                                 <TextField prefHeight="24.0" prefWidth="175.0" />
                             </children>
                         </HBox>
