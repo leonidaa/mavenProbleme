@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
 
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -32,7 +33,10 @@ public class MainApplication extends Application {
         try {
             //First, load root layout from RootLayout.fxml
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainApplication.class.getResource("RootLayout.fxml"));
+            URL url=MainApplication.class.getResource("/RootLayout.fxml");
+            System.out.println("url "+url);
+
+            loader.setLocation(MainApplication.class.getResource("/RootLayout.fxml"));
             rootLayout = (BorderPane) loader.load();
             //Second, show the scene containing the root layout.
             Scene scene = new Scene(rootLayout); //We are sending rootLayout to the Scene.
@@ -48,8 +52,8 @@ public class MainApplication extends Application {
         try {
             //First, load EmployeeOperationsView from EmployeeView.fxml
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainApplication.class.getResource("EmployeeView.fxml"));
-            AnchorPane employeeOperationsView = (AnchorPane) loader.load();
+            loader.setLocation(MainApplication.class.getResource("/EmployeeOperations.fxml"));
+            BorderPane employeeOperationsView = (BorderPane) loader.load();
             // Set Employee Operations view into the center of root layout.
             rootLayout.setCenter(employeeOperationsView);
         } catch (IOException e) {
