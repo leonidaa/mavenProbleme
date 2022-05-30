@@ -7,15 +7,17 @@ import javafx.collections.ObservableList;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
 
 import javafx.scene.control.TableView;
-import java.awt.*;
+
+import java.net.URL;
 import java.sql.Date;
 import java.sql.SQLException;
+import java.util.ResourceBundle;
 
-public class EmployeeController {
+public class EmployeeController implements Initializable{
     @FXML
     private TableView employeeTable;
     @FXML
@@ -86,6 +88,23 @@ public class EmployeeController {
         observableList.add(employee);
         employeeTable.setItems(observableList);
 
+    }
+
+    @FXML
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+    empIdColumn.setCellValueFactory(cellData ->cellData.
+            getValue().employeeIdProperty().asObject());
+    empNameColumn.setCellValueFactory(cellData ->
+            cellData.getValue().firstNameProperty());
+    empLastNameColumn.setCellValueFactory(cellData->
+                    cellData.getValue().lastNameProperty());
+    empEmailColumn.setCellValueFactory(cellData->cellData
+                    .getValue().emailProperty());
+    empHireDateColumn.setCellValueFactory(cellData->cellData
+            .getValue().hireDateProperty());
+    empPhoneNumberColumn.setCellValueFactory(cellData->cellData
+            .getValue().phoneNumberProperty());
     }
 
 }
