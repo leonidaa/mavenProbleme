@@ -44,7 +44,7 @@
                             </children>
                         </VBox>
                         <Label layoutX="41.0" layoutY="321.0" text="Result Console" />
-                        <TextArea layoutX="41.0" layoutY="348.0" prefHeight="168.0" prefWidth="232.0" />
+                        <TextArea fx:id="resultArea" layoutX="41.0" layoutY="348.0" prefHeight="168.0" prefWidth="232.0" />
                         <TableView fx:id="employeeTable" editable="true" layoutX="295.0" layoutY="286.0" prefHeight="214.0" prefWidth="499.0" tableMenuButtonVisible="true">
                             <columns>
                                 <TableColumn fx:id="empIdColumn" prefWidth="75.0" text="Id" />
@@ -63,7 +63,7 @@
                         </HBox>
                         <HBox layoutX="470.0" layoutY="74.0" prefHeight="24.0" prefWidth="289.0" spacing="10.0">
                             <children>
-                                <TextField prefHeight="24.0" prefWidth="96.0" />
+                                <TextField fx:id="empIdText" prefHeight="24.0" prefWidth="96.0" />
                                 <TextField prefHeight="24.0" prefWidth="175.0" />
                             </children>
                         </HBox>
