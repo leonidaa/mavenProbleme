@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73c72d41-57c7-4ee4-baca-94fdb70b957f" name="Changes" comment="########50 characters Subject ###################&#10;&#10;########72 characters Body ############################################&#10;&#10;#The seven rules of a great Git commit message&#10;#&#10;#https://cbea.ms/git-commit/#imperative&#10;#https://alex-wasik.medium.com/create-a-custom-git-commit-template-84468232a459&#10;# 1 Keep in mind: This has all been said before.&#10;# 2 Separate subject from body with a blank line&#10;# 3 Limit the subject line to 50 characters&#10;# 4 Capitalize the subject line&#10;# 5 Do not end the subject line with a period&#10;# 6 Use the imperative mood in the subject line&#10;# 7 Wrap the body at 72 characters&#10;# 8 Use the body to explain what and why vs. how&#10;#">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scenebuilderproba/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scenebuilderproba/MainApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/scenebuilderproba/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scenebuilderproba/controller/EmployeeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/EmployeeOperations.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/EmployeeOperations.fxml" afterDir="false" />
     </list>
@@ -41,13 +39,16 @@
     </option>
   </component>
   <component name="ProjectId" id="29nzv5KIh0unsAEUxn5hyy9IXzh" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Downloaded.Files.Path.Enabled": "true",
     "Repository.Attach.Annotations": "false",
@@ -111,5 +112,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

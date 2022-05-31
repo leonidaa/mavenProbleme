@@ -79,6 +79,18 @@ public class EmployeeController implements Initializable{
     }
 
 
+    @FXML
+    private void populateAndShowEmployee(ObservableList<Employee> observableList) throws ClassNotFoundException {
+        if (observableList!=null)
+        {
+            populateEmployee(observableList);
+        }
+        else {
+            resultArea.setText("this employee does not exist\n ");
+        }
+
+    }
+
     private void setEmpInfoToTextArea( Employee employee) {
         resultArea.setText("FirstName"+employee.getFirstName()+" LastName"+employee.getLastName()+"\n");
     }
@@ -89,7 +101,11 @@ public class EmployeeController implements Initializable{
         employeeTable.setItems(observableList);
 
     }
+    @FXML
+    private void populateEmployee(ObservableList<Employee> observableList ) throws ClassNotFoundException{
+         employeeTable.setItems(observableList);
 
+    }
     @FXML
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -106,5 +122,19 @@ public class EmployeeController implements Initializable{
     empPhoneNumberColumn.setCellValueFactory(cellData->cellData
             .getValue().phoneNumberProperty());
     }
+    @FXML
+    void searchAllEmps(ActionEvent event) throws SQLException,ClassNotFoundException{
+        try {
+            //System.out.println("aerg");
+            ObservableList<Employee> observableList=EmployeeDataAccessObject.searchEmployeesAll();
 
+            populateAndShowEmployee(observableList);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            resultArea.setText("Error occured \n "+e);
+            throw e;
+        }
+
+    }
 }

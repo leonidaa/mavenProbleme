@@ -69,7 +69,7 @@
                         </HBox>
                         <Separator layoutX="6.0" layoutY="-1.0" prefHeight="0.0" prefWidth="803.0" />
                         <Separator layoutX="281.0" layoutY="-3.0" orientation="VERTICAL" prefHeight="578.0" prefWidth="8.0" />
-                        <Button fx:id="searchEmpsBtn" layoutX="476.0" layoutY="170.0" mnemonicParsing="false" text="Serach_All_Employees" />
+                        <Button fx:id="searchEmpsBtn" layoutX="476.0" layoutY="170.0" mnemonicParsing="false" onAction="#searchAllEmps" text="Serach_All_Employees" />
                     </children>
                 </AnchorPane>
             </children>
