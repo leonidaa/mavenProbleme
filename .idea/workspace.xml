@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="73c72d41-57c7-4ee4-baca-94fdb70b957f" name="Changes" comment="########50 characters Subject ###################&#10;&#10;########72 characters Body ############################################&#10;&#10;#The seven rules of a great Git commit message&#10;#&#10;#https://cbea.ms/git-commit/#imperative&#10;#https://alex-wasik.medium.com/create-a-custom-git-commit-template-84468232a459&#10;# 1 Keep in mind: This has all been said before.&#10;# 2 Separate subject from body with a blank line&#10;# 3 Limit the subject line to 50 characters&#10;# 4 Capitalize the subject line&#10;# 5 Do not end the subject line with a period&#10;# 6 Use the imperative mood in the subject line&#10;# 7 Wrap the body at 72 characters&#10;# 8 Use the body to explain what and why vs. how&#10;#">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scenebuilderproba/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scenebuilderproba/MainApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/scenebuilderproba/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scenebuilderproba/controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scenebuilderproba/model/EmployeeDataAccessObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scenebuilderproba/model/EmployeeDataAccessObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/EmployeeOperations.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/EmployeeOperations.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +61,7 @@
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "MavenSettings"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">

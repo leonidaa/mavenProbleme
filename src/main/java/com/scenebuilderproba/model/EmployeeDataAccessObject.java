@@ -75,4 +75,16 @@ public class EmployeeDataAccessObject {
         }
         return employeeObservableList;
     }
+
+    public static  void updateEmployeeEmail(String employeeId,String email) throws SQLException, ClassNotFoundException {
+        String selectStatement = "UPDATE employees SET EMAIL='"+email+"' WHERE employee_id="+employeeId;
+        System.out.println("\n selectStatement"+selectStatement);
+
+        try {
+            DbUtil.dbExecuteUpdate(selectStatement);
+        } catch (SQLException e) {
+            System.out.println("while updating email for" + employeeId + "id,error occur:" + e);
+            throw e;
+        }
+    }
 }

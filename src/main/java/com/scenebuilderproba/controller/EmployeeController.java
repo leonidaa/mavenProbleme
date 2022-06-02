@@ -44,6 +44,8 @@ public class EmployeeController implements Initializable{
     private TableColumn<Employee, String> empPhoneNumberColumn;
     @FXML
     private TableColumn<Employee, Date> empHireDateColumn;
+    @FXML
+    private TextField emailTextField;
 
     @FXML
     private void searchEmployee(ActionEvent actionEvent) throws ClassNotFoundException, SQLException {
@@ -135,6 +137,22 @@ public class EmployeeController implements Initializable{
             resultArea.setText("Error occured \n "+e);
             throw e;
         }
-
     }
+    @FXML
+    private void updateEmail(ActionEvent event) throws SQLException, ClassNotFoundException{
+
+        try {
+            //System.out.println("aerg");
+           EmployeeDataAccessObject.updateEmployeeEmail(empIdText.getText(),emailTextField.getText());
+
+            //populateAndShowEmployee(employee);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            resultArea.setText("Error occured \n "+e);
+            throw e;
+        }
+    }
+
+
 }
