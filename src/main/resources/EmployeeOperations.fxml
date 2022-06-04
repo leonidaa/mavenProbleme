@@ -23,11 +23,12 @@
                             <children>
                                 <Button fx:id="searchEmpBtn" mnemonicParsing="false" onAction="#searchEmployee" text="Search" />
                                 <Button mnemonicParsing="false" onAction="#updateEmail" text="Update" />
-                                <Button mnemonicParsing="false" text="Delete" />
+                                <Button mnemonicParsing="false" onAction="#deleteEmployById" text="Delete" />
                             </children>
                         </HBox>
                         <VBox layoutX="37.0" layoutY="120.0" spacing="20.0">
                             <children>
+                        <Label layoutX="10.0" layoutY="10.0" text="Id" />
                                 <Label text="Name " />
                                 <Label text="Surname" />
                                 <Label text="Email" />
@@ -36,11 +37,12 @@
                         </VBox>
                         <VBox layoutX="129.0" layoutY="116.0" spacing="10.0">
                             <children>
-                                <TextField prefHeight="24.0" prefWidth="96.0" />
-                                <TextField prefHeight="24.0" prefWidth="96.0" />
-                                <TextField prefHeight="24.0" prefWidth="96.0" />
-                                <TextField layoutX="10.0" layoutY="78.0" prefHeight="24.0" prefWidth="96.0" />
-                                <Button mnemonicParsing="false" text="Add Employee" />
+                        <TextField fx:id="employeeId" layoutX="10.0" layoutY="10.0" prefHeight="24.0" prefWidth="96.0" />
+                                <TextField fx:id="nameTextField" prefHeight="24.0" prefWidth="96.0" />
+                                <TextField fx:id="lastNameTextField" prefHeight="24.0" prefWidth="96.0" />
+                                <TextField fx:id="emailTextFieldAdd" prefHeight="24.0" prefWidth="96.0" />
+                                <TextField fx:id="phoneTextField" layoutX="10.0" layoutY="78.0" prefHeight="24.0" prefWidth="96.0" />
+                                <Button mnemonicParsing="false" onAction="#addEmployee" text="Add Employee" />
                             </children>
                         </VBox>
                         <Label layoutX="41.0" layoutY="321.0" text="Result Console" />

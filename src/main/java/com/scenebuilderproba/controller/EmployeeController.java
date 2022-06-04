@@ -19,6 +19,8 @@ import java.util.ResourceBundle;
 
 public class EmployeeController implements Initializable{
     @FXML
+    private TextField employeeId;
+    @FXML
     private TableView employeeTable;
     @FXML
     private TextField empIdText;
@@ -27,11 +29,15 @@ public class EmployeeController implements Initializable{
     @FXML
     private TextField newEmailText;
     @FXML
-    private TextField nameText;
+    private TextField lastNameTextField;
+
     @FXML
-    private TextField surnameText;
+    private TextField nameTextField;
+
     @FXML
-    private TextField emailText;
+    private TextField phoneTextField;
+    @FXML
+    private TextField emailTextFieldAdd;
     @FXML
     private TableColumn<Employee, Integer> empIdColumn;
     @FXML
@@ -153,6 +159,33 @@ public class EmployeeController implements Initializable{
             throw e;
         }
     }
+    @FXML
+    private void deleteEmployById(ActionEvent event) throws SQLException,ClassNotFoundException{
+        try {
+            EmployeeDataAccessObject.deleteEmploy(empIdText.getText());
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+            resultArea.setText("Error occured \n  "+e);
+        }
+    }
+    @FXML
+    private void addEmployee(ActionEvent event) throws SQLException,ClassNotFoundException {
+        Employee employee =new Employee();
+        employee.setEmployeeId(Integer.parseInt(employeeId.getText()));
+        employee.setFirstName(nameTextField.getText());
+        employee.setLastName(lastNameTextField.getText());
+        employee.setEmail(emailTextFieldAdd.getText());
+        employee.setPhoneNumber(phoneTextField.getText());
 
+        try {
+            EmployeeDataAccessObject.addEmployeeDb(employee );
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+            resultArea.setText("Error occured \n"+e );
+
+        }
+    }
 
 }

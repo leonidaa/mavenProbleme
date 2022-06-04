@@ -87,4 +87,31 @@ public class EmployeeDataAccessObject {
             throw e;
         }
     }
+    public static void deleteEmploy (String employeeId) throws SQLException,ClassNotFoundException{
+
+         String selectStatement = "DELETE FROM employees WHERE employee_id="+employeeId;
+        try {
+            DbUtil.dbExecuteUpdate(selectStatement);
+        } catch (SQLException e) {
+            System.out.println("while delete row for" + employeeId + "id,error occur:" + e);
+            throw e;
+        }
+    }
+    public static void addEmployeeDb(Employee employee) throws SQLException,ClassNotFoundException{
+
+        //INSERT INTO "HR"."EMPLOYEES" (EMPLOYEE_ID, FIRST_NAME, LAST_NAME, EMAIL, PHONE_NUMBER, HIRE_DATE, JOB_ID, SALARY, MANAGER_ID, DEPARTMENT_ID) VALUES
+        // ('210', 'aer', 'rst', 'tdyj', '011.44.14563.456', TO_DATE('2006-08-21 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'SA_REP', '6000', '100', '50')
+        //String selectStatement = "DELETE FROM employees WHERE employee_id="+employeeId;
+        //+",TO_DATE('2006-08-21 00:00:00', 'YYYY-MM-DD HH24:MI:SS'),"
+        String selectStatement = "INSERT INTO \"HR\".\"EMPLOYEES\" (EMPLOYEE_ID, FIRST_NAME, LAST_NAME, EMAIL, PHONE_NUMBER, HIRE_DATE, JOB_ID) VALUES ('"+employee.getEmployeeId()+
+                "','"+employee.getFirstName()+"','"+
+        employee.getLastName()+"','"+employee.getEmail()+"','"+employee.getPhoneNumber()+"', TO_DATE('2006-08-21 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'SA_REP')";
+        System.out.println("selectStatement= "+selectStatement+"\n");
+        try {
+            DbUtil.dbExecuteUpdate(selectStatement);
+        } catch (SQLException e) {
+            System.out.println("while insert a Employee with Id for" + employee.getEmployeeId() + "id,error occur:" + e);
+            throw e;
+        }
+    }
 }
